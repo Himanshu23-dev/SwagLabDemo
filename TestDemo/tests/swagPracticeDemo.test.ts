@@ -4,8 +4,8 @@ import {test,expect} from '@playwright/test'
 test ('Website practice ',async({page})=>{
 
     await page.goto('https://www.saucedemo.com/');
-    //await page.getByPlaceholder('Username').fill('locked_out_user');
-    //await page.waitForTimeout(3000);
+    await page.getByPlaceholder('Username').fill('locked_out_user');
+    await page.waitForTimeout(3000);
     await page.getByPlaceholder('Username').type('standard_user');
    
     await page.getByPlaceholder('Password').type('secret_sauce');
